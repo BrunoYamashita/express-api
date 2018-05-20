@@ -1,138 +1,118 @@
 [{
-    "id": 0,
     "title": "Culpa Enim Suscipit Voluptatem",
     "user": "@cNewman",
     "yearPublished": 2015,
     "price": "$12.99",
     "rating": "1.3/5"
 }, {
-    "id": 1,
     "title": "Quasi Excepturi Mollitia",
     "user": "@jNguyen",
     "yearPublished": 2006,
     "price": "$15.99",
     "rating": "4.5/5"
 }, {
-    "id": 2,
     "title": "Magnam Obcaecati Ab Asperiores A",
     "user": "@fMcGee",
     "yearPublished": 2007,
     "price": "$20.99",
     "rating": "4.1/5"
 }, {
-    "id": 3,
     "title": "Ex",
     "user": "@aDaniels",
     "yearPublished": 2005,
     "price": "$24.99",
     "rating": "2.4/5"
 }, {
-    "id": 4,
     "title": "Voluptate Cumque Qui Nihil",
     "user": "@mSparks",
     "yearPublished": 2012,
     "price": "$8.99",
     "rating": "1.6/5"
 }, {
-    "id": 5,
     "title": "Laboriosam",
     "author": "@eGuerrero",
     "yearPublished": 2010,
     "price": "$8.99",
     "rating": "4.8/5"
 }, {
-    "id": 6,
     "title": "Quidem Delectus",
     "user": "@mHayes",
     "yearPublished": 2005,
     "price": "$20.99",
     "rating": "4.1/5"
 }, {
-    "id": 7,
     "title": "Voluptatibus Iure",
     "user": "@tHolmes",
     "yearPublished": 2003,
     "price": "$14.99",
     "rating": "3.2/5"
 }, {
-    "id": 8,
     "title": "Aliquam Magnam Magni Voluptatem Dolore",
     "user": "@eThornton",
     "yearPublished": 2016,
     "price": "$7.99",
     "rating": "1.6/5"
 }, {
-    "id": 9,
     "title": "Architecto Non Quasi Sed Consequatur",
     "user": "@eKeller",
     "yearPublished": 2016,
     "price": "$12.99",
     "rating": "2/5"
 }, {
-    "id": 10,
     "title": "Iste Quod",
     "user": "@mIngram",
     "yearPublished": 2005,
     "price": "$19.99",
     "rating": "2/5"
 }, {
-    "id": 11,
     "title": "Perspiciatis Quisquam",
     "user": "@lHale",
     "yearPublished": 2012,
     "price": "$11.99",
     "rating": "4.6/5"
 }, {
-    "id": 12,
     "title": "Aperiam Iure",
     "user": "@mStanley",
     "yearPublished": 2006,
     "price": "$9.99",
     "rating": "2.1/5"
 }, {
-    "id": 13,
     "title": "Quibusdam Similique Eius Earum Repudiandae",
     "user": "@dLindsey",
     "yearPublished": 2001,
     "price": "$9.99",
     "rating": "5/5"
 }, {
-    "id": 14,
     "title": "Eaque Soluta",
     "user": "@kWillis",
     "yearPublished": 2004,
     "price": "$10.99",
     "rating": "2.7/5"
 }, {
-    "id": 15,
     "title": "Eveniet Tempora Doloremque Aliquam",
     "user": "@pDavidson",
     "yearPublished": 2010,
     "price": "$15.99",
     "rating": "4.5/5"
 }, {
-    "id": 16,
     "title": "Officia Ipsam Ea Soluta",
     "user": "@tBishop",
     "yearPublished": 2008,
     "price": "$19.99",
     "rating": "4.2/5"
 }, {
-    "id": 17,
     "title": "Ducimus Repellat Sequi Accusamus Unde",
     "user": "@mHunt",
     "yearPublished": 2010,
     "price": "$3.99",
     "rating": "1/5"
 }, {
-    "id": 18,
     "title": "Dicta Molestiae Perspiciatis Omnis Ducimus",
     "user": "@mPratt",
     "yearPublished": 2002,
     "price": "$7.99",
     "rating": "4.5/5"
 }, {
-    "id": 19,
     "title": "Officiis Suscipit Quasi Sequi Error",
     "user": "@mLove",
     "yearPublished": 2009,

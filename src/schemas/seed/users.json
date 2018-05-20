@@ -1,5 +1,4 @@
 [{
-    "id": 0,
     "fullName": "Nina Ellis",
     "gender": "female",
     "age": 61,
@@ -7,7 +6,6 @@
     "phone": "(443) 545-8479",
     "username": "nEllis"
 }, {
-    "id": 2,
     "fullName": "Nathan Cobb",
     "gender": "male",
     "age": 39,
@@ -15,7 +13,6 @@
     "phone": "(368) 849-8721",
     "username": "nCobb"
 }, {
-    "id": 3,
     "fullName": "Nell Payne",
     "gender": "female",
     "age": 49,
@@ -23,7 +20,6 @@
     "phone": "(754) 297-3282",
     "username": "nPayne"
 }, {
-    "id": 4,
     "fullName": "Juan Douglas",
     "gender": "male",
     "age": 37,
@@ -31,7 +27,6 @@
     "phone": "(950) 933-8532",
     "username": "jDouglas"
 }, {
-    "id": 5,
     "fullName": "Manuel Parker",
     "gender": "male",
     "age": 34,
@@ -39,7 +34,6 @@
     "phone": "(754) 381-4273",
     "username": "mParker"
 }, {
-    "id": 6,
     "fullName": "Benjamin Day",
     "gender": "male",
     "age": 21,
@@ -47,7 +41,6 @@
     "phone": "(360) 935-7443",
     "username": "bDay"
 }, {
-    "id": 7,
     "fullName": "Patrick Maldonado",
     "gender": "male",
     "age": 58,
@@ -55,7 +48,6 @@
     "phone": "(204) 601-5789",
     "username": "pMaldonado"
 }, {
-    "id": 8,
     "fullName": "Jeff Smith",
     "gender": "male",
     "age": 37,
@@ -63,7 +55,6 @@
     "phone": "(506) 360-8982",
     "username": "jSmith"
 }, {
-    "id": 9,
     "fullName": "Katherine Love",
     "gender": "female",
     "age": 46,
@@ -71,7 +62,6 @@
     "phone": "(679) 945-7785",
     "username": "kLove"
 }, {
-    "id": 10,
     "fullName": "Travis Bowen",
     "gender": "male",
     "age": 60,
@@ -79,7 +69,6 @@
     "phone": "(528) 531-1611",
     "username": "tBowen"
 }, {
-    "id": 11,
     "fullName": "Samuel Hampton",
     "gender": "male",
     "age": 43,
@@ -87,7 +76,6 @@
     "phone": "(913) 298-8410",
     "username": "sHampton"
 }, {
-    "id": 12,
     "fullName": "Kevin Norton",
     "gender": "male",
     "age": 20,
@@ -95,7 +83,6 @@
     "phone": "(239) 237-6736",
     "username": "kNorton"
 }, {
-    "id": 13,
     "fullName": "Nicholas Ellis",
     "gender": "male",
     "age": 27,
@@ -103,7 +90,6 @@
     "phone": "(813) 229-1864",
     "username": "nEllis"
 }, {
-    "id": 14,
     "fullName": "Louise Lucas",
     "gender": "female",
     "age": 20,
@@ -111,7 +97,6 @@
     "phone": "(546) 345-1371",
     "username": "lLucas"
 }, {
-    "id": 15,
     "fullName": "Frances Perkins",
     "gender": "female",
     "age": 23,
@@ -119,7 +104,6 @@
     "phone": "(214) 885-5742",
     "username": "fPerkins"
 }, {
-    "id": 16,
     "fullName": "Esther Castillo",
     "gender": "female",
     "age": 36,
@@ -127,7 +111,6 @@
     "phone": "(541) 725-8912",
     "username": "eCastillo"
 }, {
-    "id": 17,
     "fullName": "Martha Gibson",
     "gender": "female",
     "age": 59,
@@ -135,7 +118,6 @@
     "phone": "(739) 705-4110",
     "username": "mGibson"
 }, {
-    "id": 18,
     "fullName": "Ruby Harrington",
     "gender": "female",
     "age": 26,
@@ -143,7 +125,6 @@
     "phone": "(883) 524-1126",
     "username": "rHarrington"
 }, {
-    "id": 19,
     "fullName": "Lucille Curry",
     "gender": "female",
     "age": 28,

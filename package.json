@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "\\",
-    "seed": "node .\\src\\schemas\\seed\\seed.js",
-    "start": "pm2 start .\\bin\\server.js -i 0 --name 'api'",
-    "dev": "nodemon .\\bin\\server.js"
+    "seed": "node seed.js",
+    "start": "pm2-runtime start index.js -i 0 --name 'api'",
+    "dev": "nodemon index.js"
   },
   "engines": {
     "npm": "6.x",

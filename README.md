@@ -12,6 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 NodeJS >= 8.11
 npm >= 6
 MongoDB >= 3.6.4
+Docker (deploy)
 ```
 
 ### Installing
@@ -103,7 +104,16 @@ Give an example
 
 ## Deployment
 
-* TODO
+For Deploy new containers run: 
+```
+docker-compose up -d 
+```
+
+To rebuild:
+
+```
+docker-compose -d --build
+```
 
 ## License
 

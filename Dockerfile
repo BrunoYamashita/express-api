@@ -1,25 +1,16 @@
+
 FROM node:latest
 
-RUN useradd --user-group --create-home --shell /bin/false app 
+RUN npm install pm2 -g -s
 
-ENV HOME=/home/app
+WORKDIR /usr/src/app
 
-COPY package.json $HOME/test/
+COPY package*.json ./
 
-RUN chown -R app:app $HOME/*
+RUN npm install -s
 
-USER app
+COPY . .
 
-WORKDIR $HOME/test
+EXPOSE 3000
 
-RUN npm cache clean && npm install --silent --progress=false
-
-USER root
-
-COPY . $HOME/tg
-
-RUN chown -R app:app $HOME/*
-
-USER root
-
-CMD ["npm", "start"]
+CMD ["npm" ,"start"]

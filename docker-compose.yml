@@ -1,0 +1,24 @@
+version: "3"
+services:
+  api:
+    container_name: api
+    restart: always
+    build: .
+    environment:
+      - NODE_ENV=production
+      - MONGO_LOGIN=test!user!13
+      - MONGO_PWD=test!pass!13
+      - PORT=3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - /data/db
+    ports:
+      - "27017:27017"

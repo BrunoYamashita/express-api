@@ -1,11 +1,15 @@
 'use strict'
 
 const mongoose = require('mongoose');
-let user = require('../users');
-let Book = require('../books');
-let bookSeed = require('./books.json');
-let authorSedd = require('./users.json');
-mongoose.connect('mongodb://localhost:27017/local')
+let user = require('./src/schemas/users');
+let Book = require('./src/schemas/books');
+let bookSeed = require('./src/schemas/seed/books.json');
+let userSedd = require('./src/schemas/seed/users.json');
+let connectionString = process.env.NODE_ENV == 'production'
+  ? 'mongodb://mongo:27017/local'
+  : 'mongodb://localhost/local'
+
+mongoose.connect(connectionString)
 .catch(err=>{
     console.log(err);
     proccess.exit(1)
@@ -16,7 +20,7 @@ mongoose.connect('mongodb://localhost:27017/local')
             console.log(err);
         })
 
-    user.insertMany(authorSedd)
+    user.insertMany(userSedd)
         .catch(err => {
             console.log(err);
         }) 
