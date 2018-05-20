@@ -1,6 +1,6 @@
-# Project Title
+# Test API
 
-DESCRIPTION
+A good description that is in you imagination
 
 ## Getting Started
 
@@ -29,28 +29,35 @@ Then config Database
 
 On Windows : 
 
-
-```
 *Crate a storage folder and log folder
 
+```
 mkdir c:\data\db
 mkdir c:\data\log
+```
 
 *Create a configuration file
+
+```
  C:\Program Files\MongoDB\Server\3.6\mongod.cfg
 
-mongod.cfg : {
+mongod.cfg : 
     systemLog:
        destination: file
        path: c:\data\log\mongod.log
     storage:
        dbPath: c:\data\db
-}
+```
 
 *Configure Mongodb
+
+```
 "C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe" --config "C:\Program Files\MongoDB\Server\3.6\mongod.cfg" --instal
+```
 
 *To run your Mongodb 
+
+```
 net start MongoDB
 net stop MongoDB
 ```
@@ -58,11 +65,22 @@ net stop MongoDB
 On Linux : 
 
 ```
+Please follow the instructions on : [MongoDB](https://docs.mongodb.com/manual/administration/install-on-linux/)
 ```
 
 On MacOS:
 
 ```
+brew update
+brew install mongodb
+mkdir -p /data/db
+mongod --dbpath <path to data directory>
+```
+
+*Run
+
+``` 
+mongo --host 127.0.0.1:27017
 ```
 
 Then run the seed
