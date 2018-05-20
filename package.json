@@ -9,6 +9,10 @@
     "start": "pm2 start .\\bin\\server.js -i 0 --name 'api'",
     "dev": "nodemon .\\bin\\server.js"
   },
+  "engines": {
+    "npm": "6.x",
+    "node": "10.x"
+  },
   "keywords": [
     "NodeJs",
     "Express",

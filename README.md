@@ -29,14 +29,14 @@ Then config Database
 
 On Windows : 
 
-*Crate a storage folder and log folder
+* Crate a storage folder and log folder
 
 ```
 mkdir c:\data\db
 mkdir c:\data\log
 ```
 
-*Create a configuration file
+* Create a configuration file
 
 ```
  C:\Program Files\MongoDB\Server\3.6\mongod.cfg
@@ -49,7 +49,7 @@ mongod.cfg :
        dbPath: c:\data\db
 ```
 
-*Configure Mongodb
+* Configure Mongodb
 
 ```
 "C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe" --config "C:\Program Files\MongoDB\Server\3.6\mongod.cfg" --instal
@@ -75,7 +75,7 @@ mkdir -p /data/db
 mongod --dbpath <path to data directory>
 ```
 
-*Run
+* Run
 
 ``` 
 mongo --host 127.0.0.1:27017
@@ -91,11 +91,11 @@ npm run seed
 
 ## Running the tests
 
-*TODO
+* TODO
 
 ### Break down into end to end tests
 
-*TODO
+* TODO
 
 ```
 Give an example
@@ -103,7 +103,7 @@ Give an example
 
 ## Deployment
 
-*TODO
+* TODO
 
 ## License
 
