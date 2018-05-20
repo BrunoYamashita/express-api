@@ -64,9 +64,7 @@ net stop MongoDB
 
 On Linux : 
 
-```
 Please follow the instructions on : [MongoDB](https://docs.mongodb.com/manual/administration/install-on-linux/)
-```
 
 On MacOS:
 
@@ -109,7 +107,7 @@ Give an example
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
