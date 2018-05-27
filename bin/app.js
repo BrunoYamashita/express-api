@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(function (err, req, res, next) {
     console.error(err.stack)
-    res.status(500).send('Something broke!')
+    res.status(500).json('Something broke!')
   });
 
 app.use('/user', user);

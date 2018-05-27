@@ -11,7 +11,7 @@ router.get('/by-name/:name', async function (req, res, next) {
     try {
         let name = req.params.name;
         const users = await userModel.findByNamePart(name);
-        res.send(users);
+        res.json(users);
 
     } catch (error) {
         next(error);
@@ -26,7 +26,7 @@ router.get('/by-name/:name', async function (req, res, next) {
 router.get('/', async function (req, res, next) {
     try {
         const users = await userModel.find();
-        res.send(users);
+        res.json(users);
     } catch (error) {
         next(error);
     }
@@ -41,7 +41,7 @@ router.post('/', async function (req, res, next) {
     try {
         let user = req.body.user;
         const users = await userModel.create(user);
-        res.send(users);
+        res.json(users);
 
     } catch (error) {
         next(error);
@@ -58,7 +58,7 @@ router.put('/:id', async function (req, res, next) {
         let id = req.params.id;
         let user = req.body.user;
         const users = await userModel.update(id);
-        res.send(user);
+        res.json(user);
 
     } catch (error) {
         next(error);
@@ -74,7 +74,7 @@ router.delete('/:id', async function (req, res, next) {
     try {
         let id = req.params.id;
         const users = await userModel.deleteOne(id);
-        res.send(users);
+        res.json(users);
     } catch (error) {
         next(error);
     }
