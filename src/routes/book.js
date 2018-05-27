@@ -38,7 +38,7 @@ router.get('/by-author/:name', async function (req, res, next) {
  * Get books list
  * @returns Array of books objects
  */
-router.get('/', async function (req, res, next) {
+router.get('', async function (req, res, next) {
   try {
     const books = await bookModel.find();
     res.send(books);
