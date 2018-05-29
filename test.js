@@ -1,63 +1,173 @@
-let app = require('../bin/app');
-let mongoose = require('mongoose');
-let should = require('chai').should;
+let app = require('./bin/app');
 let expect = require('chai').expect;
-let request = require('supertest');
-let connectionString = process.env.NODE_ENV == 'production'
-  ? 'mongodb://mongo:27017/local'
-  : 'mongodb://localhost/local'
+let mongoose = require('mongoose');
+let request = require('supertest')(app);
+let connectionString =  'mongodb://localhost/store';
 
-describe('#BooksController', function() {
+describe('#BooksRoutes', function() {
 
-    before(function(done) {
-        mongoose.connect(connectionString).then(()=>{
+    beforeEach(function(done) {
+        mongoose.connect(connectionString)
+        .then(()=>{
             done();
+        })
+        .catch(err=>{
+            throw err;
         })
     });
 
     it('#Books list',(done)=> {
-        request(app)
-        .get('/book')
-        .expect('Content-Type', /json/)
-        .expect('Content-Length', '4')
-        .expect(200, "ok")
-        .end(function(err, res){
-           if (err) throw err;
-        });
-        // request.get('/book')
-        //     .set('Accept', 'application/json')
-        //     .expect(200)
-        //     .expect(function(res) {
-        //         expect(res.body).to.be.a('array');
-        //     })
-        //     .end(function(err, res) {
-        //         if (err) throw err;
-        //         done();
-        //       });
-            
+        request
+            .get('/book')
+            .end(function(err, res) {
+                expect(res.statusCode).to.equal(200)
+                expect(res.body).to.be.a('array');
+                done();
+              });
     });
 
     it('#Books list filtered by title',(done)=> {
-        request.get('/book/by-title/:title')
-            .set('Accept', 'application/json')
-            .expect(200, done);
+        request.get('/book/by-title/a')
+        .end(function(err, res) { 
+            expect(res.statusCode).to.equal(200); 
+            expect(res.body).to.be.an('array').that.is.not.empty; 
+            done(); 
+          }); 
+    });
+
+    it('#Books list filtered by title no url value',(done)=> {
+        request
+            .get('/book/by-title/')
+            .end(function(err, res) { 
+                expect(res.statusCode).to.equal(404); 
+                expect(res.body).not.to.be.an('array'); 
+                done(); 
+              }); 
     });
 
     it('#Books list filtered by author', (done) =>{
-        request.get('/book/by-author/:author')
-            .set('Accept', 'application/json')
-            .expect(200, done);
+        request.get('/book/by-author/a')
+            .end(function(err, res) { 
+                expect(res.statusCode).to.equal(200); 
+                expect(res.body).to.be.an('array').that.is.not.empty; 
+                done(); 
+             }); 
+    });
+
+    it('#Books list filtered by author no url value',(done)=> {
+        request
+            .get('/book/by-author/')
+            .end(function(err, res) { 
+                expect(res.statusCode).to.equal(404); 
+                expect(res.body).not.to.be.an('array'); 
+                done(); 
+              }); 
     });
 
     it('#Books create invalid', (done)=> {
-        request.post('/book')
+        request
+            .post('/book')
             .send({titulo: "", descricao: "novo livro"})
-            .expect(400, done);
+            .end(function(err, res) { 
+                expect(res.statusCode).to.equal(500); 
+                expect(res.body).not.to.be.an('array'); 
+                expect(res.body).to.be.an('object');
+                expect(res.body).to.have.property('errors') 
+                done(); 
+              }); 
     });
 
     it('#Books create valid', (done)=> {
         request.post('/book')
-            .send({titulo: "titulo", descricao: "novo livro", preco: 20.50})
-            .expect(302, done);
+            .send({
+                "book":{
+                    "id": 0,
+                    "title": "Culpa Enim Suscipit Voluptatem",
+                    "user": "@cNewman",
+                    "yearPublished": 2015,
+                    "price": "$12.99",
+                    "rating": "1.3/5"
+                }
+            })
+            .end(function(err, res) { 
+                expect(res.statusCode).to.equal(200); 
+                expect(res.body).to.be.an('object'); 
+                done(); 
+              });
+    });
+});
+
+describe('#UsersRoutes', function() {
+
+    beforeEach(function(done) {
+        mongoose.connect(connectionString)
+        .then(()=>{
+            done();
+        })
+        .catch(err=>{
+            throw err;
+        })
+    });
+
+    it('#Users list',(done)=> {
+        request
+            .get('/user')
+            .end(function(err, res) {
+                expect(res.statusCode).to.equal(200)
+                expect(res.body).to.be.a('array');
+                expect(res.body).not.to.be.empty;
+                done();
+              });
+    });
+
+    it('#Users list filtered by name',(done)=> {
+        request.get('/user/by-name/a')
+        .end(function(err, res) { 
+            expect(res.statusCode).to.equal(200); 
+            expect(res.body).to.be.an('array').that.is.not.empty; 
+            done(); 
+          }); 
+    });
+
+    it('#Users list filtered by name no url value',(done)=> {
+        request
+            .get('/user/by-name/')
+            .end(function(err, res) { 
+                expect(res.statusCode).to.equal(404); 
+                expect(res.body).not.to.be.an('array'); 
+                done(); 
+              }); 
+    });
+
+    it('#Users create invalid', (done)=> {
+        request
+            .post('/user')
+            .send({fullname: "", username: "new user"})
+            .end(function(err, res) { 
+                expect(res.statusCode).to.equal(500); 
+                expect(res.body).not.to.be.an('array'); 
+                expect(res.body).to.be.an('object');
+                expect(res.body).to.have.property('errors') 
+                done(); 
+              }); 
+    });
+
+    it('#Users create valid', (done)=> {
+        request.post('/user')
+            .send({
+                "user":{
+                    "fullName": "Test this will save in mongo sorry",
+                    "gender": "male",
+                    "age": 99,
+                    "email": "test@yay.com",
+                    "phone": "(360) 935-7443",
+                    "username": "Test"
+                }
+            })
+            .end(function(err, res) { 
+                expect(res.statusCode).to.equal(200); 
+                expect(res.body).to.be.an('object'); 
+                done(); 
+              });
     });
 });

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "\\",
+    "test": "./node_modules/.bin/mocha test.js",
     "seed": "node seed.js",
     "start": "pm2-runtime start index.js -i 0 --name 'api'",
     "dev": "nodemon index.js"
@@ -32,7 +32,6 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
-    "jest": "^22.4.3",
     "mocha": "^5.1.1",
     "nodemon": "^1.17.3",
     "supertest": "^3.1.0"
